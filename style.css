@@ -15,13 +15,14 @@
 
 body {
     scroll-behavior: smooth;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 .landing-page {
-    min-height: 100vh;
     background: url("./images/bg-desktop.svg") var(--violet);
     position: relative;
+    min-height: 100vh;
+    width:100%;
 }
 
 header {
@@ -35,10 +36,18 @@ header img{
 .content{
     display: flex;
     margin-top:2.9rem;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .left-mockup{
-    padding-left:4rem;
+    display: flex;
+    margin-left:4rem;
+    width:50%;
+}
+
+.left-mockup img{
+    width:90%;
 }
 
 .right-text{
@@ -46,6 +55,10 @@ header img{
     font-weight:400;
     padding:3rem;
     color:#fff;
+    margin-left:2rem;
+    width:70%;
+    display: flex;
+    flex-direction: column;
 }
 
 .right-text .heading{
@@ -83,7 +96,7 @@ header img{
 .right-text button:hover{
     background: var(--s-magenta);
     transition: all 0.25s ease;
-    box-shadow: none;
+    box-shadow: hsla(300, 69%, 71%,0.5) 0px 30px 16px;
     color:#fff;
 }
 
@@ -125,3 +138,73 @@ footer{
     transition: all 0.25s ease;
 }
 
+
+@media screen and (min-width:768px) and (max-width:991px){
+    .right-text{
+        width:100%;
+    }
+    .right-text .heading{
+        font-size: 2rem;        
+    }
+}
+
+@media screen and (max-width:768px){
+    .landing-page{
+        flex-direction: column;
+        width:100%;
+        min-height:100vh;
+        min-width:100vw;
+    }
+
+    .content{
+        flex-direction: column;
+    }
+    
+    header img{
+        width:10rem;
+    }
+
+    .left-mockup{
+        width:100%;
+        margin:0;
+        /* background:red; */
+        justify-content: center;
+    }
+
+    .left-mockup img{
+        width:75%;
+    }
+
+    .right-text{
+        width:100%;
+        padding:0;
+        margin:0;
+        margin-top:2rem;
+        text-align: center;
+        /* justify-content: center; */
+        align-items: center;
+        margin-bottom:4rem;
+        padding: 0 2rem;
+    }
+
+    .right-text .heading{
+        font-size:1.5rem;
+        width:auto;
+    }
+
+    .right-text .para1{
+        width:auto;
+        font-size:0.9rem;
+    }
+
+    .right-text button{
+        width:200px;
+        padding:10px 20px;
+    }
+    footer{
+        position:relative;
+        justify-content:center;
+        padding:0;
+        padding-bottom:2rem;
+    }
+}
