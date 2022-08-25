@@ -154,6 +154,9 @@ footer{
         width:100%;
         min-height:100vh;
         min-width:100vw;
+        background:url("./images/bg-mobile.svg") var(--violet);
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
     .content{
